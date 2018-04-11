@@ -1,0 +1,9 @@
+<template>
+    <md-empty-state
+            md-rounded
+            class="md-accent"
+            md-icon="sentiment_very_dissatisfied"
+            md-label="404"
+            md-description="当前页面不存在!">
+    </md-empty-state>
+</template>
