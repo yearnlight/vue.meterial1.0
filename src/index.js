@@ -13,7 +13,9 @@ import store from './store'
 
 sync(store, router)
 
-const root = document.getElementsByTagName('body')[0]
+const root = document.createElement('div');
+
+document.body.appendChild(root);
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = new Vue({
