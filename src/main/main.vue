@@ -8,16 +8,28 @@
                 <md-button title="显示菜单" class="md-icon-button" v-if="!menuVisible" @click="toggleMenu">
                     <md-icon>menu</md-icon>
                 </md-button>
-                <h2 class="md-title" style="flex: 1">SkY FORM</h2>
+                <h2 class="md-title" style="flex: 1">
+                    <md-icon>filter_drama</md-icon>
+                    SkY FORM
+                </h2>
                 <md-menu md-size="medium" md-align-trigger md-direction="bottom-end">
                     <md-button title="主题" class="md-icon-button" md-menu-trigger>
                         <md-icon>invert_colors</md-icon>
                     </md-button>
 
                     <md-menu-content>
-                        <md-menu-item @click="setTheme('default')">默认(亮蓝)</md-menu-item>
-                        <md-menu-item @click="setTheme('black-green-light')">亮黑</md-menu-item>
-                        <md-menu-item @click="setTheme('default-dark')">暗绿</md-menu-item>
+                        <md-menu-item @click="setTheme('default')">
+                            <md-icon style="color:#448aff;">invert_colors</md-icon>亮蓝(默认)
+                        </md-menu-item>
+                        <md-menu-item @click="setTheme('black-green-light')">
+                            <md-icon style="color:#212121;">invert_colors</md-icon>亮黑
+                        </md-menu-item>
+                        <md-menu-item @click="setTheme('default-dark')">
+                            <md-icon style="color:#b2ff59;">invert_colors</md-icon>暗绿
+                        </md-menu-item>
+                        <md-menu-item @click="setTheme('teal-light')">
+                            <md-icon style="color:#009688;">invert_colors</md-icon>亮青
+                        </md-menu-item>
                     </md-menu-content>
                 </md-menu>
                 <md-menu md-size="medium" md-align-trigger md-direction="bottom-end">
