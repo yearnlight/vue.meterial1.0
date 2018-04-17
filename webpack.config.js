@@ -43,17 +43,15 @@ const config = {
               ]
             },
             {
-                test:/\.sass$/,
+                test:/\.scss$/,
                 use:[
                     'style-loader',
                     'css-loader',
                     {
-                        loader:'postcss-loader',
-                        options:{
-                            sourceMap:true
+                        loader: "sass-loader", options: {
+                            sourceMap: true
                         }
-                    },
-                    'sass-loader'
+                    }
                 ]
             },
             {
@@ -83,11 +81,8 @@ const config = {
         ),
         new HTMLPlugin(
             {
-                title:"sky cloud",
-                favicon:path.join(__dirname,'src/asset/favicon.ico'),
-                files:{
-                    css:['//fonts.lug.ustc.edu.cn/icon?family=Material+Icons']
-                }
+                title:"Sky Cloud",
+                favicon:path.join(__dirname,'src/asset/favicon.ico')
             }
         )
     ]

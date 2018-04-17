@@ -1,33 +1,51 @@
 <template>
     <div>
-        <md-menu md-size="medium" md-align-trigger md-direction="bottom-end">
-            <md-button title="账户" class="md-icon-button md-primary md-raised" md-menu-trigger>
-                <md-icon>perm_identity</md-icon>
-            </md-button>
+        <md-steppers>
+            <md-step id="first" md-label="基础信息">
+                <form novalidate @submit.stop.prevent="showSnackbar = true">
+                    <div>
+                        <div for="snackbar-center" class="md-body-2">Position</div>
+                        <md-radio v-model="position" id="snackbar-center" name="snackbar-horizontal" value="center">Centered</md-radio>
+                        <md-radio v-model="position" id="snackbar-left" name="snackbar-horizontal" value="left">Left</md-radio>
+                    </div>
 
-            <md-menu-content>
-                <md-menu-item>账号：admin</md-menu-item>
-                <md-menu-item>角色：super</md-menu-item>
-                <md-menu-item>登录时间：2018-4-10 11:45:09</md-menu-item>
-            </md-menu-content>
-        </md-menu>
+                    <div>
+                        <div class="md-body-2">Duration</div>
 
-        <md-menu md-size="big" md-direction="bottom-end">
-            <md-button class="md-icon-button" md-menu-trigger>
-                <md-icon>near_me</md-icon>
-            </md-button>
+                        <md-switch v-model="isInfinity">Infinite</md-switch>
 
-            <md-menu-content>
-                <md-menu-item>
-                    <span>Find on map</span>
-                    <md-icon>near_me</md-icon>
-                </md-menu-item>
+                        <md-field>
+                            <label for="snackbar-duration">Miliseconds</label>
+                            <md-input type="number" id="snackbar-duration" v-model.number="duration" :disabled="isInfinity"></md-input>
+                        </md-field>
+                    </div>
 
-                <md-menu-item>
-                    <span>Call</span>
-                    <md-icon>phone</md-icon>
-                </md-menu-item>
-            </md-menu-content>
-        </md-menu>
+                    <md-button type="submit" class="md-primary md-raised">Open Snackbar</md-button>
+
+                    <md-snackbar :md-position="position" :md-duration="isInfinity ? Infinity : duration" :md-active.sync="showSnackbar" md-persistent>
+                        <span>Connection timeout. Showing limited messages!</span>
+                        <md-button class="md-primary" @click="showSnackbar = false">Retry</md-button>
+                    </md-snackbar>
+                </form>
+            </md-step>
+
+            <md-step id="second" md-label="主机信息">
+                <div>
+                    <md-progress-bar md-mode="indeterminate"></md-progress-bar>
+                    <md-progress-bar class="md-accent" md-mode="indeterminate"></md-progress-bar>
+                </div>
+            </md-step>
+
+            <md-step id="third" md-label="配置信息">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus eveniet quaerat modi cumque quos sed, temporibus nemo eius amet aliquid, illo minus blanditiis tempore, dolores voluptas dolore placeat nulla.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias doloribus eveniet quaerat modi cumque quos sed, temporibus nemo eius amet aliquid, illo minus blanditiis tempore, dolores voluptas dolore placeat nulla.</p>
+            </md-step>
+        </md-steppers>
     </div>
 </template>
+
+<script>
+    export default {
+        name: 'StepperHorizontal'
+    }
+</script>

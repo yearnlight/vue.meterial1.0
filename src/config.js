@@ -13,15 +13,10 @@ import VueMaterial from 'vue-material'
 Vue.config.productionTip = false
 
 import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/prebuilt/default.scss'
+import 'vue-material/dist/theme/prebuilt/default-dark.scss'
+import 'vue-material/dist/theme/prebuilt/black-green-light.scss'
 
-import 'vue-material/dist/theme/default.css'
-// Vue.material.registerTheme('default', {
-//     primary: 'blue',
-//     accent: 'red',
-//     warn: 'red',
-//     background: 'grey'
-// })
-// Vue.material.setCurrentTheme('night')//设置当前主题
 Vue.use(VueMaterial)
 
 //应用http服务

@@ -78,11 +78,16 @@
         }),
         methods: {
             searchOnTable () {
-                this.searched = searchByName(this.users, this.search)
+                this.searched = searchByName(this.logs, this.search)
             }
         },
         created () {
             this.searched = this.logs
+        },
+        mounted:function(){
+//            this.$root.eventHub.$on("curTheme",function(curTheme){
+//
+//            })
         }
     }
 </script>
