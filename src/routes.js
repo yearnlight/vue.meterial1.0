@@ -1,7 +1,7 @@
 export const routes = [
     {
         path: '/resource',
-        name: '云计算',
+        name: 'AI',
         page: 'resource/resource.vue'
     },
     {

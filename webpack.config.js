@@ -81,7 +81,7 @@ const config = {
         ),
         new HTMLPlugin(
             {
-                title:"Sky Cloud",
+                title:"AIOps",
                 favicon:path.join(__dirname,'src/asset/favicon.ico')
             }
         )

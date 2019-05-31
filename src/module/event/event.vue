@@ -46,6 +46,12 @@
 
 <script>
     export default {
-        name: 'StepperHorizontal'
+        name: 'StepperHorizontal',
+        data(){
+            return{
+                isInfinity:false,
+                showSnackbar:false
+            }
+        }
     }
 </script>

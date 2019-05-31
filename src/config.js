@@ -12,11 +12,14 @@ import VueMaterial from 'vue-material'
 
 Vue.config.productionTip = false
 
+
+
 import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/prebuilt/default.scss'
-import 'vue-material/dist/theme/prebuilt/default-dark.scss'
-import 'vue-material/dist/theme/prebuilt/black-green-light.scss'
-import 'vue-material/dist/theme/prebuilt/teal-light.scss'
+import 'vue-material/dist/theme/default.css'
+// import 'vue-material/dist/theme/prebuilt/default-dark.scss'
+// import 'vue-material/dist/theme/prebuilt/black-green-light.scss'
+// import 'vue-material/dist/theme/black-green-light.css'
+// import 'vue-material/dist/theme/teal-light.scss'
 
 Vue.use(VueMaterial)
 
